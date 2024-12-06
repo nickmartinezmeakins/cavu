@@ -3,7 +3,6 @@ const { defineProps, defineSlots, defineEmits, defineExpose, defineModel, define
 const props = defineProps();
 const statusStyle = computed(() => {
     const normalizedAction = props.action.trim().toLowerCase();
-    // Predefined exact phrases
     if (normalizedAction === 'flight closing') {
         return { text: 'Flight Closing', border: 'border-orange', color: 'text-black' };
     }

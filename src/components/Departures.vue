@@ -5,15 +5,15 @@ import DepartureStatus from './DepartureStatus.vue'
 import UpdateFlightStatus from './UpdateFlightStatus.vue'
 import DeparturesBoard from './DeparturesBoard.vue'
 
+const DEPARTURES_URL = import.meta.env.VITE_FLIGHTS_API
+
 const flights = ref<Flights | null>(null)
 const error = ref<string | null>(null)
-const loading = ref(true) // Track loading state
+const loading = ref(true)
 
 const fetchData = async () => {
   try {
-    const response = await fetch(
-      'https://6315ae3e5b85ba9b11e4cb85.mockapi.io/departures/Flightdata'
-    )
+    const response = await fetch(`${DEPARTURES_URL}departures/Flightdata`)
     if (!response.ok) {
       throw new Error('Failed to fetch flight data.')
     }
@@ -22,7 +22,7 @@ const fetchData = async () => {
   } catch (err: any) {
     error.value = err.message
   } finally {
-    loading.value = false // Ensure loading is set to false after fetch attempt
+    loading.value = false
   }
 }
 

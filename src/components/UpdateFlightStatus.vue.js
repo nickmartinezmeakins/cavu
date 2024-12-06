@@ -5,7 +5,6 @@ const emit = defineEmits();
 const selectedFlight = ref('');
 const updatedStatus = ref('');
 const customStatus = ref('');
-// Computed property to check form validity
 const isFormValid = computed(() => {
     if (!selectedFlight.value || !updatedStatus.value) {
         return false;

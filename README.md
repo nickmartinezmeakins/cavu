@@ -1,18 +1,10 @@
 # departures-board
 
-This template should help get you started developing with Vue 3 in Vite.
+This project uses Vue3 and Typescript. I have used Tailwind for quick prototyping.
 
-## Recommended IDE Setup
+I've used fetch() to get the API data and ordered the list by `scheduledDepartureDateTime`. The spec and designs werent overly specific so I have used some design freedom to build something that matches the spec and works well. As no endpoint to update the departures was given this only works on the client. It would've been interesting to create some WebHooks to get the list to update. I thought about doing something like adding a setInterval to check for updates but decided against it. I originally used GSAP to create animations of the flight cards but I encoutered an issue with the cards when running the tests so I have removed it for now.
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
-
-## Type Support for `.vue` Imports in TS
-
-TypeScript cannot handle type information for `.vue` imports by default, so we replace the `tsc` CLI with `vue-tsc` for type checking. In editors, we need [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) to make the TypeScript language service aware of `.vue` types.
-
-## Customize configuration
-
-See [Vite Configuration Reference](https://vite.dev/config/).
+It was avery enjoyable task!
 
 ## Project Setup
 
@@ -36,12 +28,6 @@ npm run build
 
 ```sh
 npm run test:unit
-```
-
-### Lint with [ESLint](https://eslint.org/)
-
-```sh
-npm run lint
 ```
 
 # README

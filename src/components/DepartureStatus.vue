@@ -6,7 +6,6 @@ const props = defineProps<{ action: string }>()
 const statusStyle = computed(() => {
   const normalizedAction = props.action.trim().toLowerCase()
 
-  // Predefined exact phrases
   if (normalizedAction === 'flight closing') {
     return { text: 'Flight Closing', border: 'border-orange', color: 'text-black' }
   }

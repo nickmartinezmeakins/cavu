@@ -16,7 +16,6 @@ const selectedFlight = ref<string>('')
 const updatedStatus = ref<string>('')
 const customStatus = ref<string>('')
 
-// Computed property to check form validity
 const isFormValid = computed(() => {
   if (!selectedFlight.value || !updatedStatus.value) {
     return false
