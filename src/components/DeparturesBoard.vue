@@ -41,7 +41,7 @@ defineProps<{
         <p>{{ departure.arrivalAirport.code }}</p>
         <p>{{ departure.airline.name }}</p>
         <p class="text-yellow">{{ departure.departureGate.number }}</p>
-        <div class="lg:col-span-2 text-left">
+        <div class="lg:col-span-2 lg:text-left">
           <DepartureStatus :action="departure.departureGate.action" />
         </div>
       </li>
