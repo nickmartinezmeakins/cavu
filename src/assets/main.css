@@ -1,0 +1,11 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  @apply bg-gradient-to-tr from-[#3C3C3C] to-black min-h-screen;
+}
+
+h3 {
+  @apply text-3xl font-bold;
+}
